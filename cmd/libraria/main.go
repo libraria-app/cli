@@ -9,12 +9,12 @@ import (
 
 	"github.com/libraria-app/cli/commands"
 	"github.com/libraria-app/cli/internal/librariacli"
-	"github.com/libraria-app/cli/internal/utils"
+	"github.com/libraria-app/cli/internal/utils/print"
 )
 
 func main() {
 	if err := run(); err != nil {
-		utils.PrintError(fmt.Sprintf("error: %v \n", err))
+		print.Error(fmt.Sprintf("error: %v \n", err))
 		os.Exit(1)
 	}
 }

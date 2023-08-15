@@ -1,7 +1,7 @@
 /*
 Copyright © 2023 libraria-app
 */
-package utils
+package print
 
 import "fmt"
 
@@ -10,10 +10,10 @@ const (
 	colorRed   = "\033[31m"
 )
 
-func PrintInfo(s string) {
+func Info(s string) {
 	fmt.Println(colorGreen, s)
 }
 
-func PrintError(s string) {
+func Error(s string) {
 	fmt.Println(colorRed, s)
 }

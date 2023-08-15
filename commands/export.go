@@ -11,7 +11,7 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/libraria-app/cli/internal/librariacli"
-	"github.com/libraria-app/cli/internal/utils"
+	"github.com/libraria-app/cli/internal/utils/print"
 	"github.com/spf13/cobra"
 )
 
@@ -35,7 +35,7 @@ func newExportCommand(lcli *librariacli.Lcli) *cobra.Command {
 by the user API Key.`,
 		Run: func(cmd *cobra.Command, args []string) {
 			if err := runExport(lcli, cmd); err != nil {
-				utils.PrintError(fmt.Sprintf("error: %v", err))
+				print.Error(fmt.Sprintf("error: %v", err))
 			}
 		},
 	}
@@ -99,7 +99,7 @@ func runExport(lcli *librariacli.Lcli, cmd *cobra.Command) error {
 		return fmt.Errorf("write file: %w", err)
 	}
 
-	utils.PrintInfo(fmt.Sprintf("The file %s is successfully generated", filename))
+	print.Info(fmt.Sprintf("The file %s is successfully generated", filename))
 
 	return nil
 }
