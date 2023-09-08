@@ -4,6 +4,11 @@ ClI tool to fetch the translation on the developer machine from [Libraria](https
 
 The latest builds can be downloaded from [Releases](https://github.com/libraria-app/cli/releases)
 
+_Note for macOS_: after downloading the binary file to make it runnable, execute the next command:
+```shell
+xattr -c {path to binary}
+```
+
 This app is a Libraria CLI client that help you to manage your translations just from your terminal.
 It allows developer to export term translation from the needed project.
 
